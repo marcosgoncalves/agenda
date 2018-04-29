@@ -2,9 +2,12 @@ package com.mkt.microservice.dao;
 
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.mkt.microservice.entity.Contato;
 
-public interface AgendaDao {
+@Repository
+public interface AgendaDAO {
 	public List<Contato> get();
 
 	public Contato get(Integer integer);

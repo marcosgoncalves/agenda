@@ -30,17 +30,32 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<scope>compile</scope>
+	<!-- <exclusions> -->
+	<!-- <exclusion> -->
+	<!-- <groupId>org.springframework.boot</groupId> -->
+	<!-- <artifactId>spring-boot-starter-tomcat</artifactId> -->
+	<!-- </exclusion> -->
+	<!-- </exclusions> -->
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 		<groupId>org.springframework.boot</groupId> -->
+<!-- 		<artifactId>spring-boot-starter-tomcat</artifactId> -->
+<!-- 		<scope>compile</scope> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-starter-jetty</artifactId> -->
+<!-- 			<scope>compile</scope> -->
+<!-- 		</dependency> -->
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -52,33 +67,42 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<scope>compile</scope>
 		</dependency>
 
 		<!-- outras dependências -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
+			<scope>compile</scope>
 		</dependency>
 
 		<!-- BANCO DE DADOS -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 	</dependencies>
 
@@ -87,6 +111,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
